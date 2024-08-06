@@ -45,10 +45,7 @@ const FaqPage = () => {
       question: 'Apakah saya bisa melakukan perubahan pada pakaian yang sudah jadi?',
       answer: 'Kami menyediakan layanan penyesuaian ukuran atau perubahan desain pada pakaian yang sudah jadi dengan biaya tambahan.',
     },
-    {
-      question: 'Apakah pakaian yang sudah jadi dapat dikembalikan?',
-      answer: 'Kami menerima pengembalian pakaian yang masih dalam kondisi baru dan belum digunakan dalam waktu 30 hari setelah pembelian. Mohon hubungi kami untuk informasi lebih lanjut.',
-    },
+
     {
       question: 'Apakah ada layanan perbaikan jika pakaian rusak?',
       answer: 'Ya, kami menyediakan layanan perbaikan pakaian jika terjadi kerusakan. Mohon hubungi kami untuk informasi lebih lanjut.',

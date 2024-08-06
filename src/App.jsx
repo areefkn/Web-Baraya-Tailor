@@ -10,12 +10,16 @@ import './dist/css/Galeri.css';
 import './dist/css/Faq.css';
 import './dist/css/lokasi.css';
 import './dist/css/tentang-kami.css';
+import './dist/css/RequestCustomForm.css';
+import './dist/css/ProductDetailPage.css'
 
 import HomePage from './pages/HomePage';
 import GaleriPage from './pages/GaleriPage';
 import FaqPage from './pages/FaqPage';
 import LokasiPage from './pages/LokasiPage';
 import TentangKamiPage from './pages/TentangKamiPage';
+import ProductDetailPage from './components/ProductDetailPage.jsx';
+import RequetsCustom from './components/RequetsCustomForm.jsx';
 
 function App() {
   return (
@@ -29,6 +33,8 @@ function App() {
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/lokasi" element={<LokasiPage/>}/>
         <Route path="/tentangkami" element={<TentangKamiPage/>} />
+        <Route path="/product/:id" element={<ProductDetailPage />} /> {/* Rute untuk halaman detail produk */}
+        <Route path="/pesan-kustom" element={<RequetsCustom/>} />
       </Routes>
       <FooterComponents />
     </div>
