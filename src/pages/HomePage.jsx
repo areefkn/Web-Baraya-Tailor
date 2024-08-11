@@ -1,150 +1,146 @@
 import React from 'react';
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Pastikan ini diimport
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = () => {
+  const navigate = useNavigate(); // Gunakan useNavigate untuk navigasi
+
+  // Data produk unggulan
+  const featuredProducts = [
+    {
+      id: 7,
+      title: 'Baju Dinas PDU',
+      imgSrc: 'https://lh5.googleusercontent.com/p/AF1QipMbWSqjLtkDWAwFW6smsBEOpzfQ8r2XElywupQ9=w203-h270-k-no',
+    },
+    {
+      id: 9,
+      title: 'Blazer Teknokrat',
+      imgSrc: 'https://lh5.googleusercontent.com/p/AF1QipMDppoIl80fY92pbonAkRAMSIEXTk_aoeUBxfMA=w231-h231-n-k-no-nu',
+    },
+    {
+      id: 6,
+      title: 'Kebaya',
+      imgSrc: 'https://lh5.googleusercontent.com/p/AF1QipOJpnHA-fxNJEAwyxBV3fSVI581PlkvadGs-vIF=w203-h360-k-no',
+    },
+    {
+      id: 4,
+      title: 'Gaun Pesta',
+      imgSrc: 'https://lh5.googleusercontent.com/p/AF1QipPAsP6TtykE0gQEvf4jaX9R6sKzGf3UbFmA8UjO=w231-h231-n-k-no-nu',
+    },
+  ];
+
+  // Data testimoni pelanggan
+  const testimonials = [
+    { id: 1, text: "Layanan yang luar biasa! Saya sangat puas dengan produk yang saya beli.", author: "Pelanggan 1" },
+    { id: 2, text: "Produk berkualitas dan pengiriman cepat. Sangat direkomendasikan!", author: "Pelanggan 2" },
+    { id: 3, text: "Saya akan kembali berbelanja di sini. Pengalaman belanja yang menyenangkan.", author: "Pelanggan 3" },
+  ];
+
   return (
     <div className="background-homepage">
       <Container className="mt-5">
-        {/* Carousel */}
         <Carousel>
+          {/* Carousel Items */}
           <Carousel.Item>
-            <img
+            <video
               className="d-block w-100"
-              src="src/assets/content/pexels-shkrabaanthony-6665039.jpg"
-              alt="First slide" width={800} height={600}
+              src="https://videos.pexels.com/video-files/6766321/6766321-uhd_2560_1440_25fps.mp4"
+              alt="First slide"
+              autoPlay
+              muted
+              loop
             />
-            <Carousel.Caption>
-              <h3>Nama Barang Pakaian 1</h3>
-              <p>Deskripsi singkat tentang barang pakaian ini.</p>
-              <a href="#">
-                <button className="btn btn-primary">Pesan Sekarang</button>
-              </a>
+            <Carousel.Caption className="caption-container">
+              <h3>Jahit Berkualitas</h3>
+              <p>Jahitan presisi dan material berkualitas untuk pakaian yang sempurna.</p>
             </Carousel.Caption>
           </Carousel.Item>
+
           <Carousel.Item>
-            <img
+            <video
               className="d-block w-100"
-              src="https://via.placeholder.com/800x400"
-              alt="Second slide" width={800} height={600}
+              src="https://videos.pexels.com/video-files/6460104/6460104-hd_1920_1080_25fps.mp4"
+              alt="Second slide"
+              autoPlay
+              muted
+              loop
             />
-            <Carousel.Caption>
-              <h3>Nama Barang Pakaian 2</h3>
-              <p>Deskripsi singkat tentang barang pakaian ini.</p>
-              <a href="#">
-                <button className="btn btn-primary">Pesan Sekarang</button>
-              </a>
+            <Carousel.Caption className="caption-container">
+              <h3>Custom Desain untuk Anda</h3>
+              <p>Kami memberikan kebebasan untuk menyesuaikan desain sesuai keinginan Anda.</p>
             </Carousel.Caption>
           </Carousel.Item>
+
           <Carousel.Item>
-            <img
+            <video
               className="d-block w-100"
-              src="https://via.placeholder.com/800x400"
-              alt="Third slide" width={800} height={600}
+              src="https://videos.pexels.com/video-files/6765470/6765470-uhd_2560_1440_25fps.mp4"
+              alt="Third slide"
+              autoPlay
+              muted
+              loop
             />
-            <Carousel.Caption>
-              <h3>Nama Barang Pakaian 3</h3>
-              <p>Deskripsi singkat tentang barang pakaian ini.</p>
-              <a href="#">
-                <button className="btn btn-primary">Pesan Sekarang</button>
-              </a>
+            <Carousel.Caption className="caption-container">
+              <h3>Jaminan Kepuasan</h3>
+              <p>Setiap jahitan kami dikerjakan dengan teliti untuk memastikan kepuasan Anda.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
 
-  <div className='bungkus-tagline'>
-    <h2 className='h2-garansi'>Kami Menjamin!!</h2>
-  <div className="container-tagline">
-      <div className="row custom-row">
-        <div className="col custom-column">
-          <h2>Kenyamanan</h2>
-          Kenyamanan maksimal dalam setiap jahitan. Pakaian berkualitas yang membuat Anda merasa nyaman sepanjang hari
+        {/* Tagline */}
+        <div className='bungkus-tagline'>
+          <h2 className='h2-garansi'>Komitmen Kami untuk Kualitas</h2>
+          <div className="container-tagline">
+            <Row className="custom-row">
+              <Col className="custom-column">
+                <h3>Kenyamanan</h3>
+                <p>Setiap jahitan dirancang untuk memberikan kenyamanan maksimal. Kami memastikan bahwa setiap pakaian yang kami buat menghadirkan kenyamanan dan kebanggaan dalam setiap langkah Anda.</p>
+              </Col>
+              <Col className="custom-column">
+                <h3>Elegan</h3>
+                <p>Desain kami menggabungkan keanggunan dan gaya yang abadi. Dengan perhatian pada detail dan kualitas, kami menawarkan pakaian yang membuat Anda tampil menawan di setiap kesempatan.</p>
+              </Col>
+              <Col className="custom-column">
+                <h3>Kepuasan</h3>
+                <p>Kepuasan pelanggan adalah prioritas utama kami. Dengan jahitan presisi dan desain yang disesuaikan, kami berkomitmen untuk memastikan setiap pelanggan merasa puas dan percaya diri.</p>
+              </Col>
+            </Row>
           </div>
-        <div className="col custom-column">
-          <h2>Kepuasaan</h2>
-          Desain elegan dalam setiap pakaian. Nikmati keanggunan dan gaya yang sempurna untuk setiap kesempatan
         </div>
-        <div className="col custom-column">
-          <h2>Elegan</h2>
-          Kepuasan Anda, prioritas kami. Jahitan presisi dan desain yang memastikan Anda merasa puas dan percaya diri
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 
         {/* Produk Unggulan */}
         <div className="my-5">
           <h2>Produk Unggulan</h2>
           <Row>
-            <Col md={3}>
-              <Card className="mb-4">
-                <Card.Img variant="top" src="https://lh5.googleusercontent.com/p/AF1QipNAmn7O7ir_vsbwd9WW_Cu6Hd7-t7Y0W2lhLdlD=w231-h193-n-k-no-nu" />
-                <Card.Body>
-                  <Card.Title>Kemaja Kpmbinasi</Card.Title>
-                  <Button variant="primary" href="#">Lihat Detail</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="mb-4">
-                <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                <Card.Body>
-                  <Card.Title>Produk 2</Card.Title>
-                  <Button variant="primary" href="#">Lihat Detail</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="mb-4">
-                <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                <Card.Body>
-                  <Card.Title>Produk 3</Card.Title>
-                  <Button variant="primary" href="#">Lihat Detail</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={3}>
-              <Card className="mb-4">
-                <Card.Img variant="top" src="https://lh5.googleusercontent.com/p/AF1QipPAsP6TtykE0gQEvf4jaX9R6sKzGf3UbFmA8UjO=w231-h231-n-k-no-nu" />
-                <Card.Body>
-                  <Card.Title>Gaun Pesta</Card.Title>
-                  <Button variant="primary" href="#">Lihat Detail</Button>
-                </Card.Body>
-              </Card>
-            </Col>
+            {featuredProducts.map((item) => (
+              <Col md={3} key={item.id}>
+                <Card className="mb-4">
+                  <Card.Img variant="top" src={item.imgSrc} />
+                  <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Button variant="primary" onClick={() => navigate(`/product/${item.id}`)}>Lihat Detail</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </div>
 
         {/* Testimoni */}
-        <div className="my-5  testimonial-col">
+        <div className="my-5 testimonial-col">
           <h2>Testimoni Pelanggan</h2>
           <Row>
-            <Col md={4}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Text>"Layanan yang luar biasa! Saya sangat puas dengan produk yang saya beli."</Card.Text>
-                  <footer className="blockquote-footer">Pelanggan 1</footer>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Text>"Produk berkualitas dan pengiriman cepat. Sangat direkomendasikan!"</Card.Text>
-                  <footer className="blockquote-footer">Pelanggan 2</footer>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card className="mb-4">
-                <Card.Body>
-                  <Card.Text>"Saya akan kembali berbelanja di sini. Pengalaman belanja yang menyenangkan."</Card.Text>
-                  <footer className="blockquote-footer">Pelanggan 3</footer>
-                </Card.Body>
-              </Card>
-            </Col>
+            {testimonials.map((item) => (
+              <Col md={4} key={item.id}>
+                <Card className="mb-4">
+                  <Card.Body>
+                    <Card.Text>"{item.text}"</Card.Text>
+                    <footer className="blockquote-footer">{item.author}</footer>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
           </Row>
         </div>
       </Container>

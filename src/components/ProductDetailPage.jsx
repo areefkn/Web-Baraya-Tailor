@@ -48,6 +48,7 @@ const ProductDetailPage = () => {
   const [selectedPriceType, setSelectedPriceType] = useState('custom');
   const navigate = useNavigate();
 
+
   // Data produk yang diinput sebelumnya
   const [products, setProducts] = useState([
     {
@@ -267,6 +268,7 @@ const ProductDetailPage = () => {
             <h4>Deskripsi:</h4>
             <p>{product.description}</p>
           </div>
+
           <Button onClick={handleOrder} className="order-button">Hubungi Via WhatsApp</Button>
         </div>
       </div>

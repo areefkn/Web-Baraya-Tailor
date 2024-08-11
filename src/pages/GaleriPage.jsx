@@ -33,7 +33,7 @@ const GaleriPage = () => {
       normalPrice: 350000,
       premiumPrice: 7550000,
       rating: 5,
-      description: 'Deskripsi Baju Anak',
+      description: 'Baju Kombinasi tapis',
       media: 'https://lh5.googleusercontent.com/p/AF1QipOUHFJp7PKxAfVsoovsQWsqVHzeRjl0b7uhRe_z=w224-h428-k-no',
       sizes: ['S', 'M', 'L'], // Menambahkan opsi ukuran
       specificSize: false, // Ukuran spesifik tidak diperlukan
@@ -84,11 +84,11 @@ const GaleriPage = () => {
     },
     {
       id: 5,
-      title: 'Kemeja',
+      title: 'Kemeja Kombinasi',
       category: 'pria',
       normalPrice: 120000,
       premiumPrice: 200000,
-      rating: 1,
+      rating: 5,
       description: 'kemeja dengan kombinasi benag dan kain yang menjadikan pakaian tampa mewah',
       media: 'https://lh5.googleusercontent.com/p/AF1QipNAmn7O7ir_vsbwd9WW_Cu6Hd7-t7Y0W2lhLdlD=w231-h193-n-k-no-nu',
       sizes: ['S', 'M', 'L'], // Menambahkan opsi ukuran
@@ -205,7 +205,7 @@ const GaleriPage = () => {
             />
           </Col>
           <Col md={6} className="d-flex justify-content-end">
-            <Button onClick={() => navigate('/pesan-kustom')}>Pesan Pakaian Kustom</Button>
+            <Button onClick={() => navigate('/pesan-kustom')}>Buat Pesanan</Button>
           </Col>
         </Row>
         <Row className="mb-3">
