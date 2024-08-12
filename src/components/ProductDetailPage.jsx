@@ -51,6 +51,14 @@ const ProductDetailPage = () => {
 
   // Data produk yang diinput sebelumnya
   const [products, setProducts] = useState([
+        // Contoh data produk - ganti ini dengan data yang diambil dari API di masa depan
+    // TODO: Ganti dengan panggilan API untuk mengambil data produk
+    // Contoh:
+    // useEffect(() => {
+    //   fetch('https://api.example.com/products')
+    //     .then(response => response.json())
+    //     .then(data => setProducts(data));
+    // }, []);
     {
       id: 1,
       title: 'Baju Tapis',
@@ -179,9 +187,18 @@ const ProductDetailPage = () => {
     }
   ]);
 
+  
+   // UseEffect untuk menemukan produk berdasarkan ID
   useEffect(() => {
     const foundProduct = products.find(p => p.id === parseInt(id));
     setProduct(foundProduct);
+        // TODO: Ganti dengan panggilan API untuk mengambil detail produk berdasarkan ID
+    // Contoh:
+    // useEffect(() => {
+    //   fetch(`https://api.example.com/products/${id}`)
+    //     .then(response => response.json())
+    //     .then(data => setProduct(data));
+    // }, [id]);
   }, [id, products]);
 
   const handleSizeChange = (size) => {

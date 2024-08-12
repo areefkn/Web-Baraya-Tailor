@@ -26,6 +26,7 @@ const GaleriPage = () => {
 
   // Data produk yang diinput sebelumnya
   const [products, setProducts] = useState([
+    
     {
       id: 1,
       title: 'Baju Tapis',
