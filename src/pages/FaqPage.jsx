@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
 
 const FaqPage = () => {
   // State untuk mengatur dropdown
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = (null);
 
   // Fungsi untuk menangani klik pada pertanyaan
   const handleToggle = (index) => {

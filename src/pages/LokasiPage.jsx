@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 function LokasiPage() {
   return (
     <div className="lokasi-container">
