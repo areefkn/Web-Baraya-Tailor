@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; // Pastikan ini diimport
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -135,7 +135,7 @@ const HomePage = () => {
               <Col md={4} key={item.id}>
                 <Card className="mb-4">
                   <Card.Body>
-                    <Card.Text>"{item.text}"</Card.Text>
+                    <Card.Text>`{item.text}`</Card.Text>
                     <footer className="blockquote-footer">{item.author}</footer>
                   </Card.Body>
                 </Card>

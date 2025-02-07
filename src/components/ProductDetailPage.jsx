@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Card, Button, ListGroup, Dropdown, Form } from 'react-bootstrap';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Container, Button, Dropdown, Form } from 'react-bootstrap';
+import { useParams} from 'react-router-dom';
 
 const formatToRupiah = (amount) => {
-  return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(amount);
+  return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR'}).format(amount);
 };
 
-const StarRating = ({ rating }) => {
+const StarRating = (rating) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
     stars.push(
@@ -46,11 +46,10 @@ const ProductDetailPage = () => {
   const [product, setProduct] = useState(null);
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedPriceType, setSelectedPriceType] = useState('custom');
-  const navigate = useNavigate();
 
 
   // Data produk yang diinput sebelumnya
-  const [products, setProducts] = useState([
+  const [products] = useState([
         // Contoh data produk - ganti ini dengan data yang diambil dari API di masa depan
     // TODO: Ganti dengan panggilan API untuk mengambil data produk
     // Contoh:

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, } from 'react';
 import { Container, Card, Button, Row, Col, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const formatToRupiah = (amount) => {
 };
 
 // Komponen untuk menampilkan rating dalam bentuk bintang
-const StarRating = ({ rating }) => {
+const StarRating = (rating) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
     stars.push(
@@ -25,7 +25,7 @@ const GaleriPage = () => {
   const [filteredItems, setFilteredItems] = useState([]);
 
   // Data produk yang diinput sebelumnya
-  const [products, setProducts] = useState([
+  const [products] = useState([
     
     {
       id: 1,
@@ -158,7 +158,7 @@ const GaleriPage = () => {
   
 
   useEffect(() => {
-    filterItems(searchKeyword, selectedCategory);
+    filterItems(searchKeyword, selectedCategory, products);
   }, [searchKeyword, selectedCategory, products]);
 
   const handleCategoryChange = (category) => {
